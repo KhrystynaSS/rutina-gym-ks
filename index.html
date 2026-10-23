@@ -1,0 +1,495 @@
+<!doctype html><html><head><title>Glúteos y Zona Lumbar</title><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabecera con plan semanal, pestañas por día y fichas foto+datos en una columna */
+:root{--bg:#f3f4f7;--card:#ffffff;--fg:#171a22;--muted:#5d6475;--line:#e1e4ec;--accent:#2f5bd8;--accent-soft:#e6ecfc;--pic:#ffffff;
+--display:"Barlow Condensed","Arial Narrow",sans-serif;--body:"Figtree",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101219;--card:#181b25;--fg:#eceef4;--muted:#9aa1b3;--line:#272b38;--accent:#7a9bff;--accent-soft:#1f2740;--pic:#f4f5f8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101219;--card:#181b25;--fg:#eceef4;--muted:#9aa1b3;--line:#272b38;--accent:#7a9bff;--accent-soft:#1f2740;--pic:#f4f5f8;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+header{display:grid;gap:10px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,8vw,58px);line-height:.95;margin:0;text-transform:uppercase;text-wrap:balance}
+.lead{margin:0;color:var(--muted);max-width:64ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted)}
+.chip b{color:var(--fg);font-weight:600}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tab{font:inherit;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--fg);display:grid;gap:2px;min-width:0}
+.tab:hover{border-color:var(--accent)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab[aria-selected="true"] .td{color:#fff;opacity:.85}
+.td{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.tn{font-family:var(--display);font-weight:600;font-size:18px;line-height:1.1;text-transform:uppercase}
+.panel{display:grid;gap:12px}
+.ph{display:grid;gap:8px;margin-bottom:4px}
+h2{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;margin:0;text-transform:uppercase}
+.note{margin:0;font-size:14px;color:var(--fg);background:var(--accent-soft);border-radius:10px;padding:10px 14px;max-width:70ch}
+.ex{display:grid;grid-template-columns:280px 1fr;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pic{background:var(--pic);display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;max-width:100%}
+.pic img{width:100%;height:100%;object-fit:contain}
+.noimg{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a90a0}
+.info{padding:16px 20px;display:grid;gap:8px;min-width:0;align-content:center}
+.top{display:flex;align-items:center;gap:10px}
+.num{font-family:var(--display);font-weight:700;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+.tag{font-size:12px;font-weight:600;letter-spacing:.04em;background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px}
+h3{font-family:var(--display);font-weight:600;font-size:25px;line-height:1.05;margin:0;text-transform:uppercase}
+.tip{margin:0;color:var(--muted);font-size:14px}
+.stats{display:flex;flex-wrap:wrap;gap:4px 28px;margin-top:2px}
+.stats div{display:grid}
+.lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.v{font-family:var(--display);font-weight:700;font-size:24px;font-variant-numeric:tabular-nums}
+.sets{display:flex;gap:8px}
+.dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);background:transparent;cursor:pointer;padding:0;transition:background .15s,border-color .15s}
+.dot:hover{border-color:var(--accent)}
+.dot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dot.on{background:var(--accent);border-color:var(--accent)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.reset{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:6px 12px;cursor:pointer}
+.notes{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:10px}
+.notes h2{font-size:24px}
+.notes dl{margin:0;display:grid;grid-template-columns:130px 1fr;gap:8px 16px}
+.notes dt{font-weight:600}
+.notes dd{margin:0;color:var(--muted);min-width:0}
+@media (max-width:700px){.tabs{grid-template-columns:repeat(2,1fr)}.tab:last-child{grid-column:1/-1}.ex{grid-template-columns:1fr}.notes dl{grid-template-columns:1fr;gap:2px}.notes dd{margin-bottom:8px}}
+@media (prefers-reduced-motion:reduce){.dot{transition:none}}
+</style>
+<div class="wrap">
+<header>
+<span class="eyebrow">Rutina de gym · 5 días</span>
+<h1>Glúteos y zona lumbar</h1>
+<p class="lead">Fortalece glúteos y la musculatura que sostiene la zona lumbar, con trabajo de cuerpo completo para mantener el equilibrio, más un día extra de tren superior. Sesiones de 45–60 min, mejor en días no consecutivos.</p>
+<div class="meta"><span class="chip"><b>3–4</b> sesiones / semana</span><span class="chip">Calentamiento <b>5–8</b> min</span></div>
+
+</header>
+<nav class="tabs" role="tablist">
+<button class="tab" role="tab" id="t-d1" aria-controls="d1" data-id="d1"><span class="td">Día 1</span><span class="tn">Glúteos</span></button><button class="tab" role="tab" id="t-d2" aria-controls="d2" data-id="d2"><span class="td">Día 2</span><span class="tn">Espalda, brazos y core</span></button><button class="tab" role="tab" id="t-d3" aria-controls="d3" data-id="d3"><span class="td">Día 3</span><span class="tn">Glúteos y zona lumbar</span></button><button class="tab" role="tab" id="t-d4" aria-controls="d4" data-id="d4"><span class="td">Día 4</span><span class="tn">Cuerpo completo y abdomen</span></button><button class="tab" role="tab" id="t-d5" aria-controls="d5" data-id="d5"><span class="td">Día 5</span><span class="tn">Tren superior</span></button></nav>
+<section class="panel" role="tabpanel" id="d1" aria-labelledby="t-d1">
+<div class="ph"><span class="eyebrow">Día 1</span><h2>Glúteos</h2><div class="meta"><span class="chip">Énfasis principal</span><span class="chip"><b>6</b> ejercicios</span><span class="chip"><b>19</b> series</span><span class="chip">45–55 min</span></div>
+</div>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-01.jpg" alt="Hip thrust con barra" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">01</span><span class="tag">Glúteo mayor</span></div>
+<h3>Hip thrust con barra</h3><p class="tip">Espalda alta en el banco, mentón recogido. Aprieta glúteo arriba 1 s.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Hip thrust con barra: serie 1" data-k="d1-0-0"></button><button class="dot" aria-label="Hip thrust con barra: serie 2" data-k="d1-0-1"></button><button class="dot" aria-label="Hip thrust con barra: serie 3" data-k="d1-0-2"></button><button class="dot" aria-label="Hip thrust con barra: serie 4" data-k="d1-0-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-02.jpg" alt="Sentadilla búlgara" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">02</span><span class="tag">Glúteo · cuádriceps</span></div>
+<h3>Sentadilla búlgara</h3><p class="tip">Pie trasero en el banco. Torso algo inclinado para cargar más glúteo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10 / pierna</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Sentadilla búlgara: serie 1" data-k="d1-1-0"></button><button class="dot" aria-label="Sentadilla búlgara: serie 2" data-k="d1-1-1"></button><button class="dot" aria-label="Sentadilla búlgara: serie 3" data-k="d1-1-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-03.jpg" alt="Peso muerto rumano" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">03</span><span class="tag">Isquios · glúteo</span></div>
+<h3>Peso muerto rumano</h3><p class="tip">Cadera atrás, barra pegada a las piernas, espalda neutra.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Peso muerto rumano: serie 1" data-k="d1-2-0"></button><button class="dot" aria-label="Peso muerto rumano: serie 2" data-k="d1-2-1"></button><button class="dot" aria-label="Peso muerto rumano: serie 3" data-k="d1-2-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-04.jpg" alt="Patada de glúteo en polea" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">04</span><span class="tag">Glúteo mayor</span></div>
+<h3>Patada de glúteo en polea</h3><p class="tip">Sin arquear la lumbar. Lleva la pierna atrás, no arriba.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15 / pierna</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Patada de glúteo en polea: serie 1" data-k="d1-3-0"></button><button class="dot" aria-label="Patada de glúteo en polea: serie 2" data-k="d1-3-1"></button><button class="dot" aria-label="Patada de glúteo en polea: serie 3" data-k="d1-3-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-05.jpg" alt="Abducción de cadera" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">05</span><span class="tag">Glúteo medio</span></div>
+<h3>Abducción de cadera</h3><p class="tip">Máquina o banda. Torso un poco adelantado y abre controlado.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">15–20</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Abducción de cadera: serie 1" data-k="d1-4-0"></button><button class="dot" aria-label="Abducción de cadera: serie 2" data-k="d1-4-1"></button><button class="dot" aria-label="Abducción de cadera: serie 3" data-k="d1-4-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-06.jpg" alt="Puente de glúteo a una pierna" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">06</span><span class="tag">Glúteo · core</span></div>
+<h3>Puente de glúteo a una pierna</h3><p class="tip">Pelvis nivelada, empuja con el talón.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12 / pierna</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Puente de glúteo a una pierna: serie 1" data-k="d1-5-0"></button><button class="dot" aria-label="Puente de glúteo a una pierna: serie 2" data-k="d1-5-1"></button><button class="dot" aria-label="Puente de glúteo a una pierna: serie 3" data-k="d1-5-2"></button></div>
+</div>
+</article>
+<div class="foot"><span class="prog" data-day="d1"></span><button class="reset" data-day="d1">Reiniciar series</button></div>
+</section>
+<section class="panel" role="tabpanel" id="d2" aria-labelledby="t-d2" hidden>
+<div class="ph"><span class="eyebrow">Día 2</span><h2>Espalda, brazos y core</h2><div class="meta"><span class="chip"><b>7</b> ejercicios</span><span class="chip"><b>22</b> series</span><span class="chip">45–55 min</span></div>
+</div>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-07.jpg" alt="Jalón al pecho" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">01</span><span class="tag">Dorsal · bíceps</span></div>
+<h3>Jalón al pecho</h3><p class="tip">Polea o asistido. Pecho arriba, baja hacia la clavícula.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Jalón al pecho: serie 1" data-k="d2-0-0"></button><button class="dot" aria-label="Jalón al pecho: serie 2" data-k="d2-0-1"></button><button class="dot" aria-label="Jalón al pecho: serie 3" data-k="d2-0-2"></button><button class="dot" aria-label="Jalón al pecho: serie 4" data-k="d2-0-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-08.jpg" alt="Remo con mancuerna a una mano" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">02</span><span class="tag">Dorsal · romboides</span></div>
+<h3>Remo con mancuerna a una mano</h3><p class="tip">Mano y rodilla en el banco, espalda plana. Codo hacia la cadera.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12 / lado</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Remo con mancuerna a una mano: serie 1" data-k="d2-1-0"></button><button class="dot" aria-label="Remo con mancuerna a una mano: serie 2" data-k="d2-1-1"></button><button class="dot" aria-label="Remo con mancuerna a una mano: serie 3" data-k="d2-1-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-09.jpg" alt="Press militar con mancuernas" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">03</span><span class="tag">Hombros · tríceps</span></div>
+<h3>Press militar con mancuernas</h3><p class="tip">Sentada, sin arquear la lumbar.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Press militar con mancuernas: serie 1" data-k="d2-2-0"></button><button class="dot" aria-label="Press militar con mancuernas: serie 2" data-k="d2-2-1"></button><button class="dot" aria-label="Press militar con mancuernas: serie 3" data-k="d2-2-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-10.jpg" alt="Curl de bíceps" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">04</span><span class="tag">Bíceps</span></div>
+<h3>Curl de bíceps</h3><p class="tip">Barra o mancuernas. Codos fijos, sin balanceo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Curl de bíceps: serie 1" data-k="d2-3-0"></button><button class="dot" aria-label="Curl de bíceps: serie 2" data-k="d2-3-1"></button><button class="dot" aria-label="Curl de bíceps: serie 3" data-k="d2-3-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-11.jpg" alt="Extensión de tríceps en polea" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">05</span><span class="tag">Tríceps</span></div>
+<h3>Extensión de tríceps en polea</h3><p class="tip">Codos pegados al cuerpo, extiende del todo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Extensión de tríceps en polea: serie 1" data-k="d2-4-0"></button><button class="dot" aria-label="Extensión de tríceps en polea: serie 2" data-k="d2-4-1"></button><button class="dot" aria-label="Extensión de tríceps en polea: serie 3" data-k="d2-4-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-12.jpg" alt="Pájaros / face pull" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">06</span><span class="tag">Deltoide posterior</span></div>
+<h3>Pájaros / face pull</h3><p class="tip">Tira hacia la cara abriendo los codos, aprieta escápulas.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Pájaros / face pull: serie 1" data-k="d2-5-0"></button><button class="dot" aria-label="Pájaros / face pull: serie 2" data-k="d2-5-1"></button><button class="dot" aria-label="Pájaros / face pull: serie 3" data-k="d2-5-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-13.jpg" alt="Plancha abdominal" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">07</span><span class="tag">Core</span></div>
+<h3>Plancha abdominal</h3><p class="tip">Cuerpo recto, glúteo y abdomen activos.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">30–45 s</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Plancha abdominal: serie 1" data-k="d2-6-0"></button><button class="dot" aria-label="Plancha abdominal: serie 2" data-k="d2-6-1"></button><button class="dot" aria-label="Plancha abdominal: serie 3" data-k="d2-6-2"></button></div>
+</div>
+</article>
+<div class="foot"><span class="prog" data-day="d2"></span><button class="reset" data-day="d2">Reiniciar series</button></div>
+</section>
+<section class="panel" role="tabpanel" id="d3" aria-labelledby="t-d3" hidden>
+<div class="ph"><span class="eyebrow">Día 3</span><h2>Glúteos y zona lumbar</h2><div class="meta"><span class="chip">Soporte lumbar</span><span class="chip"><b>7</b> ejercicios</span><span class="chip"><b>22</b> series</span><span class="chip">50–60 min</span></div>
+<p class="note">Día clave para fortalecer los erectores espinales y el core profundo, los músculos que estabilizan la zona lumbar.</p></div>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-14.jpg" alt="Peso muerto convencional o sumo" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">01</span><span class="tag">Cadena posterior</span></div>
+<h3>Peso muerto convencional o sumo</h3><p class="tip">Barra pegada al cuerpo, espalda neutra. Empuja el suelo con las piernas.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">8–10</span></div>
+<div><span class="lbl">Descanso</span><span class="v">2 min</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Peso muerto convencional o sumo: serie 1" data-k="d3-0-0"></button><button class="dot" aria-label="Peso muerto convencional o sumo: serie 2" data-k="d3-0-1"></button><button class="dot" aria-label="Peso muerto convencional o sumo: serie 3" data-k="d3-0-2"></button><button class="dot" aria-label="Peso muerto convencional o sumo: serie 4" data-k="d3-0-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-15.jpg" alt="Buenos días con barra" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">02</span><span class="tag">Isquios · erectores</span></div>
+<h3>Buenos días con barra</h3><p class="tip">Peso ligero. Rodillas algo flexionadas, bisagra de cadera.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Buenos días con barra: serie 1" data-k="d3-1-0"></button><button class="dot" aria-label="Buenos días con barra: serie 2" data-k="d3-1-1"></button><button class="dot" aria-label="Buenos días con barra: serie 3" data-k="d3-1-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-16.jpg" alt="Hiperextensiones" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">03</span><span class="tag">Erectores · glúteo</span></div>
+<h3>Hiperextensiones</h3><p class="tip">En banco lumbar. Sube hasta alinear el cuerpo, sin hiperextender.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Hiperextensiones: serie 1" data-k="d3-2-0"></button><button class="dot" aria-label="Hiperextensiones: serie 2" data-k="d3-2-1"></button><button class="dot" aria-label="Hiperextensiones: serie 3" data-k="d3-2-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-17.jpg" alt="Puente de glúteo con barra" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">04</span><span class="tag">Glúteo mayor</span></div>
+<h3>Puente de glúteo con barra</h3><p class="tip">Desde el suelo, barra sobre la cadera con almohadilla.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Puente de glúteo con barra: serie 1" data-k="d3-3-0"></button><button class="dot" aria-label="Puente de glúteo con barra: serie 2" data-k="d3-3-1"></button><button class="dot" aria-label="Puente de glúteo con barra: serie 3" data-k="d3-3-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-18.jpg" alt="Superman" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">05</span><span class="tag">Erectores · glúteo</span></div>
+<h3>Superman</h3><p class="tip">Boca abajo, eleva brazos y piernas a la vez. Isométrico o dinámico.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12 o 20–30 s</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Superman: serie 1" data-k="d3-4-0"></button><button class="dot" aria-label="Superman: serie 2" data-k="d3-4-1"></button><button class="dot" aria-label="Superman: serie 3" data-k="d3-4-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-19.jpg" alt="Pallof press" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">06</span><span class="tag">Core anti-rotación</span></div>
+<h3>Pallof press</h3><p class="tip">De lado a la polea. Extiende los brazos sin dejar que el tronco gire.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12 / lado</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Pallof press: serie 1" data-k="d3-5-0"></button><button class="dot" aria-label="Pallof press: serie 2" data-k="d3-5-1"></button><button class="dot" aria-label="Pallof press: serie 3" data-k="d3-5-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-20.jpg" alt="Bird-dog" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">07</span><span class="tag">Core profundo</span></div>
+<h3>Bird-dog</h3><p class="tip">A cuatro patas, brazo y pierna contrarios. Espalda quieta.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10 / lado</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Bird-dog: serie 1" data-k="d3-6-0"></button><button class="dot" aria-label="Bird-dog: serie 2" data-k="d3-6-1"></button><button class="dot" aria-label="Bird-dog: serie 3" data-k="d3-6-2"></button></div>
+</div>
+</article>
+<div class="foot"><span class="prog" data-day="d3"></span><button class="reset" data-day="d3">Reiniciar series</button></div>
+</section>
+<section class="panel" role="tabpanel" id="d4" aria-labelledby="t-d4" hidden>
+<div class="ph"><span class="eyebrow">Día 4</span><h2>Cuerpo completo y abdomen</h2><div class="meta"><span class="chip">Opcional</span><span class="chip"><b>7</b> ejercicios</span><span class="chip"><b>22</b> series</span><span class="chip">45–55 min</span></div>
+</div>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-21.jpg" alt="Sentadilla con barra o goblet" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">01</span><span class="tag">Cuádriceps · glúteo</span></div>
+<h3>Sentadilla con barra o goblet</h3><p class="tip">Pecho arriba, rodillas en la línea de los pies.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">10</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Sentadilla con barra o goblet: serie 1" data-k="d4-0-0"></button><button class="dot" aria-label="Sentadilla con barra o goblet: serie 2" data-k="d4-0-1"></button><button class="dot" aria-label="Sentadilla con barra o goblet: serie 3" data-k="d4-0-2"></button><button class="dot" aria-label="Sentadilla con barra o goblet: serie 4" data-k="d4-0-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-22.jpg" alt="Zancadas caminando" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">02</span><span class="tag">Glúteo · cuádriceps</span></div>
+<h3>Zancadas caminando</h3><p class="tip">Paso largo, rodilla trasera cerca del suelo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10 / pierna</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Zancadas caminando: serie 1" data-k="d4-1-0"></button><button class="dot" aria-label="Zancadas caminando: serie 2" data-k="d4-1-1"></button><button class="dot" aria-label="Zancadas caminando: serie 3" data-k="d4-1-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-23.jpg" alt="Press de banca o con mancuernas" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">03</span><span class="tag">Pecho · tríceps</span></div>
+<h3>Press de banca o con mancuernas</h3><p class="tip">Escápulas juntas, pies firmes en el suelo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">75 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Press de banca o con mancuernas: serie 1" data-k="d4-2-0"></button><button class="dot" aria-label="Press de banca o con mancuernas: serie 2" data-k="d4-2-1"></button><button class="dot" aria-label="Press de banca o con mancuernas: serie 3" data-k="d4-2-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-24.jpg" alt="Remo en máquina o TRX" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">04</span><span class="tag">Espalda</span></div>
+<h3>Remo en máquina o TRX</h3><p class="tip">Pecho apoyado, tira con los codos.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Remo en máquina o TRX: serie 1" data-k="d4-3-0"></button><button class="dot" aria-label="Remo en máquina o TRX: serie 2" data-k="d4-3-1"></button><button class="dot" aria-label="Remo en máquina o TRX: serie 3" data-k="d4-3-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-25.jpg" alt="Elevación de piernas" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">05</span><span class="tag">Abdomen inferior</span></div>
+<h3>Elevación de piernas</h3><p class="tip">Colgado o tumbado. Sube controlado, sin balanceo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Elevación de piernas: serie 1" data-k="d4-4-0"></button><button class="dot" aria-label="Elevación de piernas: serie 2" data-k="d4-4-1"></button><button class="dot" aria-label="Elevación de piernas: serie 3" data-k="d4-4-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-26.jpg" alt="Crunch con peso o en polea" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">06</span><span class="tag">Abdominales</span></div>
+<h3>Crunch con peso o en polea</h3><p class="tip">Enrolla el tronco, la cadera no se mueve.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Crunch con peso o en polea: serie 1" data-k="d4-5-0"></button><button class="dot" aria-label="Crunch con peso o en polea: serie 2" data-k="d4-5-1"></button><button class="dot" aria-label="Crunch con peso o en polea: serie 3" data-k="d4-5-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-27.jpg" alt="Plancha lateral" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">07</span><span class="tag">Oblicuos</span></div>
+<h3>Plancha lateral</h3><p class="tip">Cadera alta, cuerpo en línea.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">20–30 s / lado</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Plancha lateral: serie 1" data-k="d4-6-0"></button><button class="dot" aria-label="Plancha lateral: serie 2" data-k="d4-6-1"></button><button class="dot" aria-label="Plancha lateral: serie 3" data-k="d4-6-2"></button></div>
+</div>
+</article>
+<div class="foot"><span class="prog" data-day="d4"></span><button class="reset" data-day="d4">Reiniciar series</button></div>
+</section>
+<section class="panel" role="tabpanel" id="d5" aria-labelledby="t-d5" hidden>
+<div class="ph"><span class="eyebrow">Día 5</span><h2>Tren superior</h2><div class="meta"><span class="chip"><b>10</b> ejercicios</span><span class="chip"><b>32</b> series</span><span class="chip">~60 min</span></div>
+<p class="note">Calentamiento: 5–10 min de movilidad de hombros y 1–2 series ligeras de press banca.</p></div>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-28.jpg" alt="Press banca" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">01</span><span class="tag">Pecho · tríceps</span></div>
+<h3>Press banca</h3><p class="tip">Mancuernas o barra. Escápulas juntas y pies firmes.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">6–8</span></div>
+<div><span class="lbl">Descanso</span><span class="v">2 min</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Press banca: serie 1" data-k="d5-0-0"></button><button class="dot" aria-label="Press banca: serie 2" data-k="d5-0-1"></button><button class="dot" aria-label="Press banca: serie 3" data-k="d5-0-2"></button><button class="dot" aria-label="Press banca: serie 4" data-k="d5-0-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-29.jpg" alt="Remo con barra" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">02</span><span class="tag">Espalda · bíceps</span></div>
+<h3>Remo con barra</h3><p class="tip">Torso inclinado a ~45°, espalda neutra. Tira hacia el ombligo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">4</span></div>
+<div><span class="lbl">Reps</span><span class="v">8</span></div>
+<div><span class="lbl">Descanso</span><span class="v">2 min</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Remo con barra: serie 1" data-k="d5-1-0"></button><button class="dot" aria-label="Remo con barra: serie 2" data-k="d5-1-1"></button><button class="dot" aria-label="Remo con barra: serie 3" data-k="d5-1-2"></button><button class="dot" aria-label="Remo con barra: serie 4" data-k="d5-1-3"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-30.jpg" alt="Press militar con mancuernas" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">03</span><span class="tag">Hombros · tríceps</span></div>
+<h3>Press militar con mancuernas</h3><p class="tip">Sentada, sin arquear la lumbar. Sube hasta casi bloquear.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">8–10</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Press militar con mancuernas: serie 1" data-k="d5-2-0"></button><button class="dot" aria-label="Press militar con mancuernas: serie 2" data-k="d5-2-1"></button><button class="dot" aria-label="Press militar con mancuernas: serie 3" data-k="d5-2-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-31.jpg" alt="Jalón al pecho" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">04</span><span class="tag">Dorsal · bíceps</span></div>
+<h3>Jalón al pecho</h3><p class="tip">Pecho arriba, baja la barra hacia la clavícula.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Jalón al pecho: serie 1" data-k="d5-3-0"></button><button class="dot" aria-label="Jalón al pecho: serie 2" data-k="d5-3-1"></button><button class="dot" aria-label="Jalón al pecho: serie 3" data-k="d5-3-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-32.jpg" alt="Press inclinado con mancuernas" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">05</span><span class="tag">Pecho superior</span></div>
+<h3>Press inclinado con mancuernas</h3><p class="tip">Banco a 30–45°. Baja controlado hasta la altura del pecho.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10</span></div>
+<div><span class="lbl">Descanso</span><span class="v">90 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Press inclinado con mancuernas: serie 1" data-k="d5-4-0"></button><button class="dot" aria-label="Press inclinado con mancuernas: serie 2" data-k="d5-4-1"></button><button class="dot" aria-label="Press inclinado con mancuernas: serie 3" data-k="d5-4-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-33.jpg" alt="Elevaciones laterales" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">06</span><span class="tag">Deltoide lateral</span></div>
+<h3>Elevaciones laterales</h3><p class="tip">Codos ligeramente flexionados. Sube solo hasta la línea del hombro.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Elevaciones laterales: serie 1" data-k="d5-5-0"></button><button class="dot" aria-label="Elevaciones laterales: serie 2" data-k="d5-5-1"></button><button class="dot" aria-label="Elevaciones laterales: serie 3" data-k="d5-5-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-34.jpg" alt="Curl de bíceps" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">07</span><span class="tag">Bíceps</span></div>
+<h3>Curl de bíceps</h3><p class="tip">Codos pegados al cuerpo, sin balancear.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Curl de bíceps: serie 1" data-k="d5-6-0"></button><button class="dot" aria-label="Curl de bíceps: serie 2" data-k="d5-6-1"></button><button class="dot" aria-label="Curl de bíceps: serie 3" data-k="d5-6-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-35.jpg" alt="Extensión de tríceps en polea" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">08</span><span class="tag">Tríceps</span></div>
+<h3>Extensión de tríceps en polea</h3><p class="tip">Codos fijos a los lados. Extiende del todo abajo.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">10–12</span></div>
+<div><span class="lbl">Descanso</span><span class="v">60 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Extensión de tríceps en polea: serie 1" data-k="d5-7-0"></button><button class="dot" aria-label="Extensión de tríceps en polea: serie 2" data-k="d5-7-1"></button><button class="dot" aria-label="Extensión de tríceps en polea: serie 3" data-k="d5-7-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-36.jpg" alt="Plancha" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">09</span><span class="tag">Core</span></div>
+<h3>Plancha</h3><p class="tip">Cuerpo recto de cabeza a talones, glúteo y abdomen activos.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">45 s</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Plancha: serie 1" data-k="d5-8-0"></button><button class="dot" aria-label="Plancha: serie 2" data-k="d5-8-1"></button><button class="dot" aria-label="Plancha: serie 3" data-k="d5-8-2"></button></div>
+</div>
+</article>
+<article class="ex">
+<div class="pic"><img src="img/ejercicio-37.jpg" alt="Crunch en polea" loading="lazy"></div>
+<div class="info"><div class="top"><span class="num">10</span><span class="tag">Abdominales</span></div>
+<h3>Crunch en polea</h3><p class="tip">De rodillas. Enrolla el tronco, la cadera no se mueve.</p><div class="stats"><div><span class="lbl">Series</span><span class="v">3</span></div>
+<div><span class="lbl">Reps</span><span class="v">12–15</span></div>
+<div><span class="lbl">Descanso</span><span class="v">45 s</span></div>
+</div>
+<div class="sets"><button class="dot" aria-label="Crunch en polea: serie 1" data-k="d5-9-0"></button><button class="dot" aria-label="Crunch en polea: serie 2" data-k="d5-9-1"></button><button class="dot" aria-label="Crunch en polea: serie 3" data-k="d5-9-2"></button></div>
+</div>
+</article>
+<div class="foot"><span class="prog" data-day="d5"></span><button class="reset" data-day="d5">Reiniciar series</button></div>
+</section>
+
+<section class="notes">
+
+<h2>Notas</h2>
+<dl>
+<dt>Calentamiento</dt><dd>5 min de cardio suave (bici, remo o cinta) y movilidad de cadera y columna: rotaciones, gato-camello y puente de glúteo sin peso.</dd>
+<dt>Progresión</dt><dd>Cuando completes el máximo de repeticiones en todas las series con buena técnica, sube el peso un 5–10% la siguiente sesión.</dd>
+<dt>Descanso</dt><dd>Deja al menos 48 h entre el Día 1 y el Día 3, porque los dos trabajan glúteos a fondo.</dd>
+<dt>Solo 3 días</dt><dd>Junta el Día 4 con el Día 2 eligiendo 4–5 ejercicios (jalón, press militar, sentadilla, elevación de piernas, plancha) y mantén los Días 1 y 3.</dd>
+<dt>Técnica</dt><dd>En hip thrust, peso muerto y sentadilla búlgara, la técnica va antes que el peso, sobre todo por la zona lumbar.</dd>
+</dl>
+</section>
+
+</div>
+
+<script>
+const KEY='gluteos-lumbar-sets',TK='gluteos-lumbar-tab';let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+function show(id){tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.id===id));panels.forEach(p=>p.hidden=p.id!==id);try{localStorage.setItem(TK,id)}catch(e){}}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.id)));
+let first='d1';const h=location.hash.slice(1);if(panels.some(p=>p.id===h))first=h;else{try{const s=localStorage.getItem(TK);if(s&&panels.some(p=>p.id===s))first=s}catch(e){}}
+show(first);
+function render(){panels.forEach(p=>{let n=0;const ds=p.querySelectorAll('.dot');ds.forEach(d=>{const on=!!st[d.dataset.k];d.classList.toggle('on',on);d.setAttribute('aria-pressed',on);if(on)n++});p.querySelector('.prog').textContent=n+' de '+ds.length+' series hechas'})}
+document.querySelectorAll('.dot').forEach(d=>d.addEventListener('click',()=>{st[d.dataset.k]=!st[d.dataset.k];save();render()}));
+document.querySelectorAll('.reset').forEach(b=>b.addEventListener('click',()=>{Object.keys(st).forEach(k=>{if(k.startsWith(b.dataset.day+'-'))delete st[k]});save();render()}));
+render();
+</script>
+
+</body></html>
